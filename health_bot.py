@@ -2,8 +2,8 @@ import feedparser
 import subprocess
 from datetime import datetime
 
-SIGNAL_NUMBER = "+639XXXXXXXXX"
-RECIPIENT = "+639YYYYYYYYY"
+SIGNAL_NUMBER = "+639102406985"
+RECIPIENT = "+639606570195" , "+639952746595"
 
 feeds = {
 "DOH": "https://doh.gov.ph/rss.xml",
