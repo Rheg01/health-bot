@@ -39,7 +39,7 @@ def generate_message():
 
 def send_signal(msg):
     subprocess.run([
-        "./signal-cli/build/install/signal-cli/bin/signal-cli",
+        "./signal-cli/bin/signal-cli",
         "-u", SIGNAL_NUMBER,
         "send",
         *RECIPIENTS,
