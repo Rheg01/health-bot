@@ -37,9 +37,13 @@ def generate_message():
 
     return msg
 
+import subprocess
+
 def send_signal(msg):
     subprocess.run([
-        "./signal-cli/bin/signal-cli",
+        "java",
+        "-jar",
+        "signal-cli.jar",
         "-u", SIGNAL_NUMBER,
         "send",
         *RECIPIENTS,
