@@ -3,12 +3,12 @@ import subprocess
 from datetime import datetime
 
 SIGNAL_NUMBER = "+639102406985"
-RECIPIENT = "+639606570195" , "+639952746595"
+RECIPIENTS = ["+639952746595", "+639606570195"]
 
 feeds = {
-"DOH": "https://doh.gov.ph/rss.xml",
-"WHO": "https://www.who.int/rss-feeds/news-english.xml",
-"UNICEF": "https://www.unicef.org/rss.xml"
+    "DOH": "https://doh.gov.ph/rss.xml",
+    "WHO": "https://www.who.int/rss-feeds/news-english.xml",
+    "UNICEF": "https://www.unicef.org/rss.xml"
 }
 
 def get_updates():
@@ -42,7 +42,7 @@ def send_signal(msg):
         "signal-cli",
         "-u", SIGNAL_NUMBER,
         "send",
-        RECIPIENT,
+        *RECIPIENTS,
         "-m", msg
     ])
 
