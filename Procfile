@@ -1,1 +1,1 @@
-worker: python health_bot.py
+worker: bash install.sh && python health_bot.py
