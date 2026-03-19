@@ -1,0 +1,8 @@
+{
+  "build": {
+    "commands": [
+      "git clone https://github.com/AsamK/signal-cli.git",
+      "cd signal-cli && ./gradlew build"
+    ]
+  }
+}
